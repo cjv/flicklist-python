@@ -5,10 +5,10 @@ class Index(webapp2.RequestHandler):
 
     def getRandomMovie(self):
         # TODO: make a list with at least 5 movie titles        
-            movie_list = ["Movie1", "Movie2", "Movie3", "Movie4", "Movie5"]
+        movie_list = ["Movie1", "Movie2", "Movie3", "Movie4", "Movie5"]
 
         # TODO: randomly choose one of the movies, and return it
-            today = random.randrange(len(movie_list))
+        today = random.randrange(len(movie_list))
 
         return movie_list[today]
 
@@ -25,8 +25,8 @@ class Index(webapp2.RequestHandler):
         # TODO: pick a different random movie, and display it under
         tomorrow = self.getRandomMovie()
         # the heading "<h1>Tommorrow's Movie</h1>"
-            content += "<h1>Tommorrow's Movie</h1>"
-            content += "<p>" + tomorrow + "</p>"
+        content += "<h1>Tommorrow's Movie</h1>"
+        content += "<p>" + tomorrow + "</p>"
 
         self.response.write(content)
 
